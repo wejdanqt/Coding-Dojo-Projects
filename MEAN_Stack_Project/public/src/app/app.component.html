@@ -1,0 +1,25 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <p *ngFor="let form of forms">{{form.title}}</p>
+  <form (submit)="onFormSubmit()">
+        <p> {{ newForm | json }} </p>
+    <input type="text" name="title" [(ngModel)]="newForm.title" />
+    <input type="submit" value="Create Form" />
+  </form>
+  <hr>
+
+  <form (submit)="onAddElementSubmit()">
+        <p> {{ newElement | json }} </p>
+    <input type="text" name="type" [(ngModel)]="newElement.type" />
+    <input type="submit" value="Create Element" />
+  </form>
+  
+
+</body>
+
+</html>
